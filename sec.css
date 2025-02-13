@@ -294,5 +294,32 @@ button {
     background: none;
 }
 
+#seeTimeBtn {
+    font-family: 'Press Start 2P', cursive; /* Красивый шрифт */
+    font-size: 20px; /* Размер текста */
+    background-color: #f6b6d3; /* Зеленый фон */
+    color: white; /* Белый текст */
+    border: none; /* Без рамки */
+    padding: 10px 20px; /* Внутренние отступы */
+    border-radius: 8px; /* Закругленные углы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
 
+    #seeTimeBtn:hover {
+        background-color: #ca4b85; /* Темнее при наведении */
+        transform: scale(1.05); /* Небольшое увеличение */
+    }
 
+    #seeTimeBtn:active {
+        transform: scale(0.95); /* Нажатие — кнопка чуть уменьшается */
+    }
+
+#timeElapsed {
+    font-size: 24px; /* Увеличиваем размер текста */
+    line-height: 1.5; /* Добавляем расстояние между строками, чтобы было читаемо */
+}
+
+#question {
+    font-size: 18px; /* Увеличиваем размер шрифта */
+}
