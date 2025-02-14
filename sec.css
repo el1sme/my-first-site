@@ -99,6 +99,12 @@ h1 {
 .icon:nth-child(7) {
     animation-delay: 1.5s;
 }
+.icon:nth-child(8) {
+    animation-delay: 1.7s;
+}
+.icon:nth-child(9) {
+    animation-delay: 1.9s;
+}
 
 /* Анимация для иконок */
 @keyframes fadeInIcon {
