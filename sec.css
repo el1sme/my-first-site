@@ -1,4 +1,4 @@
-﻿body {
+body {
     background: radial-gradient(circle,#d2a8d6, #e3c8e4, #f4e1e6, #f6c6d7, #f7a1b2);
     background-size: cover;
     background-color: #ffe3e3;
@@ -44,7 +44,7 @@ h1 {
     gap: 40px;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 120px;
     background-color: #e7e2f3;
     padding: 30px;
     border-radius: 20px; /* Закругленные углы */
@@ -95,6 +95,9 @@ h1 {
 }
 .icon:nth-child(6) {
     animation-delay: 1.3s;
+}
+.icon:nth-child(7) {
+    animation-delay: 1.5s;
 }
 
 /* Анимация для иконок */
