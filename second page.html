@@ -507,17 +507,36 @@
             }
 
             document.getElementById('seeTimeBtn').addEventListener('click', function () {
-                let startDate = new Date('2024-12-31T00:00:00'); // Дата начала
-                let now = new Date(); // Текущая дата
+                const startDate = new Date(2024, 11, 31, 0, 0, 0);
+                const now = new Date();
 
-                let diff = now - startDate; // Разница в миллисекундах
+                let tempDate = new Date(startDate.getTime());
+
+                let years = now.getFullYear() - startDate.getFullYear();
+                let months = now.getMonth() - startDate.getMonth();
+                let days = now.getDate() - startDate.getDate();
+
+                if (days < 0) {
+                    months -= 1;
+                    const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+                    days += prevMonth.getDate();
+                }
+
+                if (months < 0) {
+                    years -= 1;
+                    months += 12;
+                }
+
+                let adjustedStart = new Date(startDate.getTime());
+                adjustedStart.setFullYear(startDate.getFullYear() + years);
+                adjustedStart.setMonth(startDate.getMonth() + months);
+                adjustedStart.setDate(startDate.getDate() + days);
+
+                let diff = now - adjustedStart;
 
                 let seconds = Math.floor(diff / 1000) % 60;
                 let minutes = Math.floor(diff / (1000 * 60)) % 60;
                 let hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
-                let days = Math.floor(diff / (1000 * 60 * 60 * 24)) % 30;
-                let months = Math.floor(diff / (1000 * 60 * 60 * 24 * 30.44)) % 12;
-                let years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
 
                 let result = `${years} years<br>${months} months<br>${days} days<br>${hours} hours<br>${minutes} minutes<br>${seconds} seconds`;
 
