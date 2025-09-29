@@ -46,8 +46,8 @@
                 <p>Love</p>
             </div>
             <div class="icon">
-                <img src="ball.png" alt="Ball">
-                <p>Ball</p>
+                <img src="video.png" alt="Videos">
+                <p>Videos</p>
             </div>
         </div>
 
@@ -87,10 +87,6 @@
                         <img src="meme6.jpg" class="gallery-image" alt="Image 12">
                         <img src="meme7.jpg" class="gallery-image" alt="Image 12">
                         <img src="lovely.jpg" class="gallery-image" alt="Image 12">
-                        <img src="we8.jpg" class="gallery-image" alt="Image 5">
-                        <img src="we9.jpg" class="gallery-image" alt="Image 5">
-                        <img src="we10.jpg" class="gallery-image" alt="Image 5">
-                        <img src="we11.jpg" class="gallery-image" alt="Image 5">
                     </div>
                     <button class="next-btn">&#10095;</button>
                 </div>
@@ -244,22 +240,8 @@
                 <img src="star.gif" alt="Heart" width="300" height="auto" />
                 <p style="color: #ff3290;">You are my super star!</p>
 
-                <!-- Кнопка для открытия видео -->
-                <button onclick="openModal('videoModal')" style="background-color: #f6b6d3; color: #ca4b85; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; border-radius: 5px; font-family: inherit; ">
-                    Click me to see something special!
-                </button>
+                
 
-            </div>
-        </div>
-
-        <!-- Модальное окно для видео -->
-        <div id="videoModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('videoModal')">&times;</span>
-                <video controls width="100%">
-                    <source src="bomba.MOV" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
             </div>
         </div>
 
@@ -284,12 +266,42 @@
             </div>
         </div>
 
-        <div id="modal-ball" class="modal">
+        <div id="modal-videos" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h2>Magic Ball</h2>
-                <img src="virgo.jpg" alt="December" width="490" height="auto" />
-                <img src="libra.jpg" alt="December" width="490" height="auto" />
+                <h2>Videos</h2>
+                
+                <!-- Кнопка для открытия видео 1-->
+                <button onclick="openModal('videoModal1')" style="background-color: #f6b6d3; color: #ca4b85; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; border-radius: 5px; font-family: inherit; ">
+                    Click me to see something special!
+                </button> 
+
+                <!-- Кнопка для открытия видео 2-->
+                <button onclick="openModal('videoModal2')" style="background-color: hsl(26, 78%, 84%); color: hsl(31, 55%, 54%); padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; border-radius: 5px; font-family: inherit; margin-top:10px;"> <!-- ← отступ сверху margin-top -->
+                    Click me to see something special!
+                </button>
+            </div>
+        </div>
+
+        <!-- Модальное окно для видео 1 -->
+        <div id="videoModal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('videoModal')">&times;</span>
+                <video controls width="100%">
+                    <source src="bomba.MOV" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <!-- Модальное окно для видео 2 -->
+        <div id="videoModal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('videoModal')">&times;</span>
+                <video controls width="100%">
+                    <source src="17hb_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
 
@@ -388,7 +400,7 @@
                 Gift: document.getElementById('modal-gift'),
                 Clock: document.getElementById('modal-clock'),
                 Love: document.getElementById('modal-love'),
-                Ball: document.getElementById('modal-ball'),
+                Videos: document.getElementById('modal-videos'),
             };
 
             icons.forEach(icon => {
@@ -551,4 +563,3 @@
 
     </body>
 </html>
-
